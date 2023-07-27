@@ -1,0 +1,147 @@
+body {
+  font-family: var(--roboto);
+  font-weight: var(--fw-light);
+}
+
+.header {
+  grid-template-rows: 1fr auto;
+}
+.primary-navigation > li:hover {
+  color: var(--secondary-clr);
+  cursor: pointer;
+}
+.primary-navigation > li {
+  font-size: 0.8125rem;
+}
+.dot-nav li button[data-active="true"] {
+  background-color: var(--secondary-clr);
+}
+.dot-nav li button[data-active="false"] {
+  background-color: transparent;
+  outline: 1px solid white;
+}
+
+.about-us {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.about-us > div {
+  color: var(--neutral-clr-1);
+}
+.play-icon {
+  outline: 3px solid white;
+  aspect-ratio: 1;
+  width: 6.5rem;
+}
+.play-icon img {
+  object-fit: cover;
+  width: 2.5rem;
+}
+
+.expertise > div {
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  grid-template-rows: auto 2px auto;
+  border-collapse: collapse;
+}
+.expertise div > article {
+  padding: 1.5rem;
+}
+.expertise div > article:is(:nth-child(2), :nth-child(6)) {
+  border-inline: 1px solid hsl(0, 0%, 50%, 0.2);
+}
+.expertise div > article h3 {
+  font-size: 0.875rem;
+  font-weight: var(--fw-black);
+}
+.expertise div > article p {
+  font-size: 0.875rem;
+}
+
+.team > section {
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+}
+.team > section figure {
+  border: 1px solid white;
+  border-radius: 0.2rem;
+  text-align: center;
+}
+.team > section figure img {
+  aspect-ratio: 1;
+  height: 15rem;
+  background-color: white;
+}
+.team > section figure > div {
+  padding: 1.5rem;
+}
+.team > section > div {
+  grid-column: span 4;
+}
+.our-works > div {
+  grid-template-columns: repeat(6, minmax(150px, 1fr));
+}
+.our-works > div div {
+  height: 11rem;
+}
+.our-works
+  > div
+  div:is(:first-child, :nth-child(5), :nth-child(8), :last-child) {
+  background-color: #b6b6b6;
+}
+.our-works > div div:is(:nth-child(4), :nth-child(9)) {
+  background-color: #8a8a8a;
+}
+.our-works > div div:is(:nth-child(2), :nth-child(11)) {
+  background-color: #acacac;
+}
+.our-works > div div:is(:nth-child(6), :nth-child(7)) {
+  background-color: #a4a4a4;
+}
+.our-works > div div:is(:nth-child(3), :nth-child(10)) {
+  background-color: #a1a1a1;
+}
+.contact {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact > div {
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 5rem;
+  padding-inline: 5rem;
+  justify-items: center;
+  align-items: center;
+}
+.contact > div header {
+  grid-column: span 2;
+}
+.footer {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.footer form {
+  grid-template-columns: max-content 5rem;
+}
+.footer form input {
+  border: 0;
+  outline: 1px solid white;
+  padding: 0.5rem 1rem;
+}
+.footer form button {
+  background-color: hsl(0, 0%, 100%, 0.4);
+  outline: 1px solid white;
+  height: 100%;
+}
+.footer form input::placeholder {
+  color: white;
+}
+
+.footer .socials li {
+  border: 1px solid white;
+  aspect-ratio: 1;
+  height: 2.5rem;
+  border-radius: 100%;
+  display: grid;
+  place-content: center;
+}
